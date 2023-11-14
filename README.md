@@ -9,8 +9,6 @@ Our dataset encompasses records of significant power outages observed across var
 
 Our main goal is to explore the correlation between severe weather events and power outages. The research is focused on determining whether severe weather conditions play a significant role in the increased occurrence of power outages compared to other contributing factors throughout the years. Our specific research question addresses whether the presence of severe weather contributes to a heightened frequency of power outages in the year with the highest recorded number of incidents.
 
-Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 10 pertinent columns. 
-
 Columns include the following:
 - **'POSTAL.CODE'**: Represents the postal code of the U.S. states
 - **'OUTAGE.START.DATE'**: This variable indicates the day of the year when the outage event started (as reported by the corresponding Utility in the region)
