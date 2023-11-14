@@ -32,16 +32,16 @@ This choropleth map below visualizes the total number of power outages for each 
    1. Combine power outage start date and time
    2. Combine power restoration date and time
 
-After step 1.1, we have 1534 rows and 8 columns. 
+After step 1.1, we have 1534 rows and 10 columns. 
 Part of our data frame: (Only top 5 rows)
 
-|    | POSTAL.CODE   | CAUSE.CATEGORY     | CAUSE.CATEGORY.DETAIL   |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |   TOTAL.PRICE | OUTAGE.START        | OUTAGE.RESTORATION   |
-|---:|:--------------|:-------------------|:------------------------|------------------:|---------------------:|--------------:|:--------------------|:---------------------|
-|  1 | MN            | severe weather     | nan                     |              3060 |                70000 |          9.28 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  |
-|  2 | MN            | intentional attack | vandalism               |                 1 |                  nan |          9.28 | 2014-05-11 18:38:00 | 2014-05-11 18:39:00  |
-|  3 | MN            | severe weather     | heavy wind              |              3000 |                70000 |          8.15 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00  |
-|  4 | MN            | severe weather     | thunderstorm            |              2550 |                68200 |          9.19 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  |
-|  5 | MN            | severe weather     | nan                     |              1740 |               250000 |         10.43 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |
+|    | STATES   | CAUSE.CATEGORY     | CAUSE.CATEGORY.DETAIL   |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |   TOTAL.PRICE | OUTAGE.START        | OUTAGE.RESTORATION   |   YEAR |
+|---:|:---------|:-------------------|:------------------------|------------------:|---------------------:|--------------:|:--------------------|:---------------------|-------:|
+|  1 | MN       | severe weather     | nan                     |              3060 |                70000 |          9.28 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  |   2011 |
+|  2 | MN       | intentional attack | vandalism               |                 1 |                  nan |          9.28 | 2014-05-11 18:38:00 | 2014-05-11 18:39:00  |   2014 |
+|  3 | MN       | severe weather     | heavy wind              |              3000 |                70000 |          8.15 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00  |   2010 |
+|  4 | MN       | severe weather     | thunderstorm            |              2550 |                68200 |          9.19 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  |   2012 |
+|  5 | MN       | severe weather     | nan                     |              1740 |               250000 |         10.43 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |   2015 |
 
 
 **Step 1.2**:
