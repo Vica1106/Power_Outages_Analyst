@@ -75,11 +75,13 @@ To enhance readability and understanding, outliers with extremely large duration
 During the process of identify possible associations:
 
 **Step 3.1**: 
- The initial graph we generate is a line graph comprising three distinct lines. The first line represents the count of major outages caused by severe weather over the years. The second line reflects the count of major outages attributed to causes other than severe weather. Lastly, the third line illustrates the total count of major outages encompassing all causes. This graph effectively demonstrates the distribution and relationship between different outage causes over time. All three lines exhibit a parallel pattern over time, with an upward trend leading to a peak around 2011, followed by a decline in subsequent years. This consistent trend of increase before 2011, a substantial peak in 2011, and a subsequent decrease is evident across all three lines.
+ The initial graph we generate is a line graph comprising three distinct lines. The first line represents the count of major outages caused by severe weather over the years. The second line reflects the count of major outages attributed to causes other than severe weather. Lastly, the third line illustrates the total count of major outages encompassing all causes. 
+ This graph effectively demonstrates the distribution and relationship between different outage causes over time. All three lines exhibit a parallel pattern over time, with an upward trend leading to a peak around 2011, followed by a decline in subsequent years. This consistent trend of increase before 2011, a substantial peak in 2011, and a subsequent decrease is evident across all three lines.
 <iframe src="assets/3_1.html" width=800 height=600 frameBorder=0></iframe>
 
-**Step 3.2**: The second graph we create is a histogram featuring two accompanying box plots. The histogram visually represents the distribution of outage durations caused by severe weather and other factors. Additionally, the box plots provide comprehensive statistical information, including measures of central tendency and the range of both distribution datasets, offering a comparative view of outage durations across different causes
-<iframe src="assets/box_graph_4.html" width=800 height=600 frameBorder=0></iframe>
+**Step 3.2**: The second graph we create is a histogram featuring two accompanying box plots. The histogram visually represents the distribution of outage durations caused by severe weather and other factors. Additionally, the box plots provide comprehensive statistical information, including measures of central tendency and the range of both distribution datasets, offering a comparative view of outage durations across different causes. 
+The data indicates that factors other than severe weather predominantly resulted in shorter outage durations, as observed from their lower median values. However, these cases exhibit numerous smaller outliers. Conversely, outages attributed to severe weather tended to have longer durations, with a wider range of variability in outage times.
+<iframe src="assets/3_2.html" width=800 height=600 frameBorder=0></iframe>
 
 
 #### Step 4: Interesting Aggregates
