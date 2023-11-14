@@ -5,7 +5,7 @@ This is a project for DSC 80 at UCSD
 
  
 ### Introduction
-The primary objective is to investigate the relationship between severe weather events and power outages. Specifically, the research aims to discern whether severe weather conditions contribute to a higher incidence of power outages compared to other causative factors over the years.
+Our main goal is to explore the correlation between severe weather events and power outages. The research is focused on determining whether severe weather conditions play a significant role in the increased occurrence of power outages compared to other contributing factors throughout the years. Our specific research question addresses whether the presence of severe weather contributes to a heightened frequency of power outages in the year with the highest recorded number of incidents.
 
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 10 pertinent columns. 
 
@@ -119,7 +119,7 @@ However, the influence on the CUSTOMERS.AFFECTED variable may be discerned throu
 <iframe src="assets/g5_2_2.html" width=800 height=600 frameBorder=0></iframe>
 <iframe src="assets/5_2_3.html" width=800 height=600 frameBorder=0></iframe>
 The p-value is approximately 0.85 , which is higher than our significance level. We fail to reject the null hypothesis, the missing data from CUSTOMERS.AFFECTED are not depends on TOTAL.PRICE.
-`
+
 **Step 5.2**:
 - **Null Hypothesis**: Values in the 'OUTAGE.DURATION' column for rows where the 'CUSTOMERS.AFFECTED' was missing were drawn from the same distribution as the values in rows where 'CUSTOMERS.AFFECTED' was not missing.
 - **Alternative Hypothesis**: They were drawn from different distributions.
@@ -131,29 +131,22 @@ The p-value is approximately 0.011, which is lower than our significance level. 
 
 ### Hypothesis Testing
 #### Severe Weather V.S. All Causes
-The question we are trying to answer is whether severe weather conditions contribute to a higher incidence of power outages compared to other causative factors over the years. We already have the data of each years power outages, so we can draw the data several times from the probabilities for each year
+The question we are trying to answer is whether the occurrence of severe weather contribute to a higher frequency of power outages compared to other causative factors in the year with the highest number of outages
 
+In our dataset, the most outage-prone year is 2011. 
 
-- **Null Hypothesis**: Outages that caused by severe weather **were** drawn at random from all power outage.
-- **Alternative Hypothesis**: Outages that caused by severe weather **were not** drawn at random from all power outage.
-- **Observation**: Outages per Year Distribution of Severe Weather.
-- **significance level**: 0.05
-<iframe src="assets/hyp_1.html" width=800 height=600 frameBorder=0></iframe>
-
-We use the TVD to compute the observed data between Severe Weather outage distribution and All Causes's outage distribution, which is 0.14467457848980325.
-
+- **Null Hypothesis**: The distribution of outages in 2011 due to severe weather is consistent with the overall distribution of outages across all causes and years.
+- **Alternative Hypothesis**: The distribution of outages in 2011 due to severe weather is larger than from the overall distribution of outages across all causes and years.
+- **Observation**: In 2021, the count of severe weather-caused outages.
+- **Significance level**: 0.05
 
 #### The plan
-
-
 To conduct our hypothesis test, we will:
-- Repeatedly generate samples of size 1398 (number of power outages) from the outages per Year distribution of all causes.
-- Each time, compute the TVD between the simulated distribution and all causes's distribution.
-- **This will generate an empirical distribution of TVDs, under the null.**
-- Finally, determine whether the observed TVD is consistent with the empirical distribution of TVDs.
-
+- Calculate the overall probability distribution of outage causes for all years.
+- Run a simulation with 100,000 iterations.
 <iframe src="assets/hyp.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Conclusion
-- The chance that the observed TVD came from the distribution of TVDs under the null is essentially 0.
-- Based on our testing, the severe weather conditions tend to contribute to a higher incidence of power outages compared to other causative factors over the years. The difference can't be explained solely due to chance.
+- The p-value is 0.96735, it is less than the significance level of 0.05. 
+- We fail to reject the null hypothesis. 
+- There is not enough evidence to conclude that the distribution of severe weather-caused outages in 2021 is significantly larger than the overall distribution across all causes and years.
