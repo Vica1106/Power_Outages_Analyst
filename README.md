@@ -5,6 +5,8 @@ This is a project for DSC 80 at UCSD
 
  
 ### Introduction
+Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 10 pertinent columns. 
+
 Our main goal is to explore the correlation between severe weather events and power outages. The research is focused on determining whether severe weather conditions play a significant role in the increased occurrence of power outages compared to other contributing factors throughout the years. Our specific research question addresses whether the presence of severe weather contributes to a heightened frequency of power outages in the year with the highest recorded number of incidents.
 
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 10 pertinent columns. 
@@ -66,7 +68,8 @@ The first graph we draw is a bar chart that counts the times of major outages ea
 <iframe src="assets/bar_chart_1.html" width=800 height=600 frameBorder=0></iframe>
 
 **Step 2.2**: 
-The second graph we draw is still a bar chart, it counts the times of major outages that causes by severe weather of each year. It also displays the distribution of a outages's happened years.
+This histogram illustrates the distribution of outage duration times. The majority of outages occurred within the range of 0 to 500 minutes. 
+To enhance readability and understanding, outliers with extremely large duration times have been filtered from the dataset.
 <iframe src="assets/2_2.html" width=800 height=600 frameBorder=0></iframe>
 
 
@@ -74,10 +77,10 @@ The second graph we draw is still a bar chart, it counts the times of major outa
 During the process of identify possible associations:
 
 **Step 3.1**: 
-The first graph we draw is a line graph which contains two lines. First line counts the major outages that caused by severe weather over year and the second line is counts the major outages for all causes. It shows the dirstribution between outages causes reasons and year. 
+The initial graph we generate is a line graph comprising three distinct lines. The first line represents the count of major outages caused by severe weather over the years. The second line reflects the count of major outages attributed to causes other than severe weather. Lastly, the third line illustrates the total count of major outages encompassing all causes. This graph effectively demonstrates the distribution and relationship between different outage causes over time.
 <iframe src="assets/3_1.html" width=800 height=600 frameBorder=0></iframe>
 
-**Step 3.2**: The second we draw is also a line graph. First line counts the major outages that caused by severe weather over year and the second line is counts the major outages for all causes. It shows the dirstribution between outages causes reasons and year.
+**Step 3.2**: The second graph we create is a histogram featuring two accompanying box plots. The histogram visually represents the distribution of outage durations caused by severe weather and other factors. Additionally, the box plots provide comprehensive statistical information, including measures of central tendency and the range of both distribution datasets, offering a comparative view of outage durations across different causes
 <iframe src="assets/box_graph_4.html" width=800 height=600 frameBorder=0></iframe>
 
 
