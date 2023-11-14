@@ -7,7 +7,7 @@ This is a project for DSC 80 at UCSD
 ### Introduction
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 10 pertinent columns. 
 
-Our main goal is to explore the correlation between severe weather events and power outages. The research is focused on determining whether severe weather conditions play a significant role in the increased occurrence of power outages compared to other contributing factors throughout the years. Our specific research question addresses whether the presence of severe weather contributes to a heightened frequency of power outages in the year with the highest recorded number of incidents.
+Our main goal is to explore the correlation between severe weather events and power outages. The research is focused on determining whether severe weather conditions play a significant role in the increased occurrence of power outages compared to other contributing factors throughout the years. Our specific research question addresses whether the occurrence of severe weather contribute to a higher frequency of power outages compared to other causative factors in the year with the highest number of outages.
 
 Columns include the following:
 - **'POSTAL.CODE'**: Represents the postal code of the U.S. states
@@ -46,8 +46,8 @@ Part of our data frame: (Only top 5 rows)
 
 **Step 1.2**:
    1. Change column "POSTAL.CODE" to "STATE" to be more readble.
-   2. Clean the data of column 'OUTAGE.DURATION'.
-   3. Create new column 'YEAR' as integer.
+   2. Clean the data of column ‘OUTAGE.DURATION’ and ignore the np.NANs in column ‘OUTAGE.DURATION’ 
+   3. Create new column ‘YEAR’ as integer for convinience of  further analysis.
 
 After step 1.2, we have 1398 rows and 9 columns. 
 Part of our data frame: (Only top 5 rows)
@@ -62,7 +62,7 @@ Part of our data frame: (Only top 5 rows)
 
 #### Step 2: Univariate Analysis
 **Step 2.1**:
-The first graph we draw is a bar chart that counts the times of major outages each year. It helps us realize which year often has major outages. It displays the distribution of a outages's happened years.
+The initial graph is a bar chart depicting the frequency of major outages each year. This visualization provides insights into the occurrence of major outages throughout different years. Before 2011, there was a consistent annual increase in the number of outages, peaking significantly in 2011. Subsequently, post-2011, there has been a gradual decline in outage occurrences. 
 <iframe src="assets/bar_chart_1.html" width=800 height=600 frameBorder=0></iframe>
 
 **Step 2.2**: 
@@ -75,7 +75,7 @@ To enhance readability and understanding, outliers with extremely large duration
 During the process of identify possible associations:
 
 **Step 3.1**: 
-The initial graph we generate is a line graph comprising three distinct lines. The first line represents the count of major outages caused by severe weather over the years. The second line reflects the count of major outages attributed to causes other than severe weather. Lastly, the third line illustrates the total count of major outages encompassing all causes. This graph effectively demonstrates the distribution and relationship between different outage causes over time.
+ The initial graph we generate is a line graph comprising three distinct lines. The first line represents the count of major outages caused by severe weather over the years. The second line reflects the count of major outages attributed to causes other than severe weather. Lastly, the third line illustrates the total count of major outages encompassing all causes. This graph effectively demonstrates the distribution and relationship between different outage causes over time. All three lines exhibit a parallel pattern over time, with an upward trend leading to a peak around 2011, followed by a decline in subsequent years. This consistent trend of increase before 2011, a substantial peak in 2011, and a subsequent decrease is evident across all three lines.
 <iframe src="assets/3_1.html" width=800 height=600 frameBorder=0></iframe>
 
 **Step 3.2**: The second graph we create is a histogram featuring two accompanying box plots. The histogram visually represents the distribution of outage durations caused by severe weather and other factors. Additionally, the box plots provide comprehensive statistical information, including measures of central tendency and the range of both distribution datasets, offering a comparative view of outage durations across different causes
@@ -84,7 +84,7 @@ The initial graph we generate is a line graph comprising three distinct lines. T
 
 #### Step 4: Interesting Aggregates
 
-We choose to group CAUSE.CATEGORY column and index of each year to create the pivot table. It helps us to realize the amount of power outages different between each caused reasons.
+We choose to group CAUSE.CATEGORY column and index of each year to create the pivot table. This presentation directly illustrates the distribution of various causes of power outages across different years, facilitating an understanding of the variations in the number of power outages attributed to each specific cause.
 
 |   YEAR |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
 |-------:|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
@@ -132,13 +132,13 @@ The p-value is approximately 0.011, which is lower than our significance level. 
 
 ### Hypothesis Testing
 #### Severe Weather V.S. All Causes
-The question we are trying to answer is whether the occurrence of severe weather contribute to a higher frequency of power outages compared to other causative factors in the year with the highest number of outages
+The question we are trying to answer is whether the occurrence of severe weather contribute to a higher frequency of power outages compared to other causative factors in the year with the highest number of outages. These choices below are good to answer the question since they all aligns with our research question. And the significance Level is a common choice. 
 
 In our dataset, the most outage-prone year is 2011. 
 
 - **Null Hypothesis**: The distribution of outages in 2011 due to severe weather is consistent with the overall distribution of outages across all causes and years.
 - **Alternative Hypothesis**: The distribution of outages in 2011 due to severe weather is larger than from the overall distribution of outages across all causes and years.
-- **Observation**: In 2021, the count of severe weather-caused outages.
+- **Test Statistic**:  The count of severe weather-caused outages.
 - **Significance level**: 0.05
 
 #### The plan
