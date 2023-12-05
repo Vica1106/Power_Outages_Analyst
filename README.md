@@ -150,6 +150,6 @@ To conduct our hypothesis test, we will:
 <iframe src="assets/hyp.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Conclusion
-- The p-value is 0.96735, it is less than the significance level of 0.05. 
-- We fail to reject the null hypothesis. 
-- There is not enough evidence to conclude that the distribution of severe weather-caused outages in 2021 is significantly larger than the overall distribution across all causes and years.
+- The p-value is 0.96735, it is more than the significance level of 0.05. 
+- We reject the null hypothesis. 
+- There is enough evidence to conclude that the distribution of severe weather-caused outages in 2021 is significantly larger than the overall distribution across all causes and years.
